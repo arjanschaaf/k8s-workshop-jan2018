@@ -1,0 +1,2 @@
+1) kubectl run nginx --image=nginx:1.13.8-alpine
+2) kubectl port-forward <pod name> <local port number (8888 for example)>:80

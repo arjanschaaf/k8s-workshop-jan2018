@@ -1,0 +1,2 @@
+1) kubectl create -f echoserver-deployment.yaml
+2) create port forward similar to exercise 1 to browse to this deployment on a local port

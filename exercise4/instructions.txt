@@ -1,0 +1,10 @@
+1) kubectl create -f blue-deployment.yaml
+2) kubectl create -f green-deployment.yaml
+3) kubectl expose deployment blue --type=NodePort
+4) kubectl expose deployment green --type=NodePort
+5) minikube service blue -> check if you see a blue screen :-)
+6) minikube service green -> check if you see a green screen :-)
+7) kubectl create -f blue-green-ingress.yaml
+8) make sure blue.green exists in your hosts file
+9) http://blue.green should show blue screen
+10) update the ingress to point to the green service, using kubectl edit

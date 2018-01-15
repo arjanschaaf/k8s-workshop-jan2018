@@ -1,0 +1,8 @@
+1) minikube addons list -> see which addons are already enabled
+2) minikube addons enable ingress -> starts an kubernetes nginx ingress controller with basic config
+3) minikube addons list -> ingress controller should now be enabled
+4) kubectl expose deployment echoserver --type=NodePort -> create an NodePort service for the deployment we created in the previous exercise
+5) minikube service echoserver -> opens the address for the service in your default browser
+6) kubectl create -f echoserver-ingress.yaml -> create the ingress object
+7) update your OS host file to point echo.server to `minikube ip`
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: green
+  labels:
+    app: green
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: green
+  template:
+    metadata:
+      labels:
+        app: green
+    spec:
+      containers:
+      - name: green
+        image: arjanschaaf/blue-green:green
+        ports:
+        - containerPort: 80
